@@ -5,6 +5,15 @@
     <title>Definitions Catalogue</title>
 
     <div th:fragment="meta" th:remove="tag">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-61222473-22"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-61222473-22');
+        </script>
+
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     </div>
@@ -74,8 +83,8 @@
                                  <ul class="au-link-list">
                                          <li th:classappend="${current == 'search'} ? active"><a th:href="@{/}">Search</a></li>
                                     <li class="divider"/>
-                                    <li><a href="/" rel="external">api.gov.au</a></li>
-                                    <li><a href="https://ausdx.io" rel="external">Digital Community Playbook</a></li>
+                                    <li><a href="/">api.gov.au</a></li>
+                                    <li><a href="/playbook">Digital Community Playbook</a></li>
                                     <li class="githubLink"><a href="https://github.com/govau/api-gov-au-definitions">Github</a></li>
                                  </ul>
                                  <div class="au-main-nav__focus-trap-bottom"></div>
